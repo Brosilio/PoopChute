@@ -44,7 +44,7 @@ namespace PoopChuteLib
             {
                 PoopClient pc = new PoopClient(client);
                 pc.OnDisconnect += OnPoopClientDisconnect;
-                if(await pc.HandshakeAsServer())
+                if(await pc.PerformHandshake())
                 {
                     Console.WriteLine($"Welcome {pc.Name} to {pc.Group}");
                     AddClient(pc);
